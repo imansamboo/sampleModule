@@ -20,8 +20,8 @@ abstract class Controller
      */
     public function index($smarty)
     {
-        $this->template($smarty);
-        //$model = new $this->modelName;
+        $model = new $this->modelName;
+        $this->template($smarty, __FUNCTION__ .'.php' ,  $model->all());
         //$this->template(__FUNCTION__ .'.php',['args' => $model->all() , 'modelName'=> $model->name] );
     }
 
@@ -32,7 +32,7 @@ abstract class Controller
      */
     public function create($smarty)
     {
-        $this->template(__FUNCTION__.'.php',[] );
+        $this->template($smarty,__FUNCTION__.'.php',[] );
     }
 
     /**
@@ -41,7 +41,7 @@ abstract class Controller
     public function store($smarty, $post)
     {
         ($this->modelName)::create($post);
-        return $this->index($smarty);
+        //return $this->index($smarty);
     }
 
     /**
@@ -53,7 +53,7 @@ abstract class Controller
     public function show($smarty, $id)
     {
         $factor = ($this->modelName)::findOrFail($id);
-        $this->template(__FUNCTION__.'.php',['factor' =>$factor] );
+        $this->template($smarty, __FUNCTION__.'.php',$factor );
     }
 
     /**
@@ -65,7 +65,7 @@ abstract class Controller
     public function edit($smarty, $id)
     {
         $factor = ($this->modelName)::findOrFail($id);
-        $this->template(__FUNCTION__.'.php',['factor' =>$factor] );
+        $this->template($smarty,__FUNCTION__.'.php',$factor );
     }
 
     /**
@@ -100,25 +100,21 @@ abstract class Controller
      * @throws \Twig_Error_Runtime
      * @throws \Twig_Error_Syntax
      */
-    public  function template($smarty, $tmp = null, $args = null)
+    public  function template($smarty, $tmp = 'index.php', $args = null)
     {
         try{
-            $smarty->assign('name', 'george smith');
+            $smarty->assign('args', $args);
             $smarty->caching = false;
             $smarty->compile_dir = $GLOBALS['templates_compiledir'];
             // display file from template folder within add-on folder
-            $smarty->display(dirname(__FILE__) . '/../../templates/sample.tpl');
-            /*$loader = new Twig_Loader_Filesystem(
-                __DIR__ .'/../views/'
-                .substr(
+            $smarty->display(dirname(__FILE__) . '/../../templates/'.
+                substr(
                     $this->modelName,
-                    strpos($this->modelName,'s\\')+2,
-                    strlen($this->modelName)
+                    strrpos($this->modelName,'\\')+1
                 )
-            );
-            $twig = new Twig_Environment($loader);
-            $template = $twig->load($tmp);
-            echo $template->render($args);*/
+                .
+                '/'
+                .$tmp);
         } catch (Exception $e) {
             die ('ERROR: ' . $e->getMessage());
         }
