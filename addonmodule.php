@@ -196,8 +196,6 @@ function addonmodule_upgrade($vars)
 }
 function addonmodule_output($vars)
 {
-
-    $twig = new WHMCS\Module\Addon\AddonModule\Controllers\CompanySpecificationController();
     if(isset($_GET['controller'])){
         $controller = 'WHMCS\Module\Addon\AddonModule\Controllers'. "\\". $_GET['controller'];
     }else{
@@ -212,15 +210,11 @@ function addonmodule_output($vars)
         echo 'Message: ' .$e->getMessage();
     }
     if(isset($_GET['action']) && $_GET['action'] == 'store') {
-        echo '<pre>';
-        print_r(array_diff_key($_POST,array('token'=>rand())));
-        echo '</pre>';
-        exit();
-        $controller->store(array_diff_key($_POST,array('token'=>rand()))) ;
+        $controller->store(new Smarty, array_diff_key($_POST,array('token'=>rand()))) ;
     }elseif (isset($_GET['action']) && $_GET['action'] == 'update' && isset($_GET['id'])) {
-        $controller->update($_POST, $_GET['id']) ;
+        $controller->update(new Smarty, $_POST, $_GET['id']) ;
     }elseif (isset($_GET['action']) && $_GET['action'] == 'destroy' && isset($_GET['id'])) {
-        $controller->destroy( $_GET['id']) ;
+        $controller->destroy(new Smarty, $_GET['id']) ;
     }elseif (isset($_GET['action']) && $_GET['action'] == 'edit' && isset($_GET['id'])) {
         $controller->edit(new Smarty, $_GET['id']) ;
     }elseif (isset($_GET['action']) && $_GET['action'] == 'show' && isset($_GET['id'])) {

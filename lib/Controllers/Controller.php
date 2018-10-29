@@ -38,10 +38,10 @@ abstract class Controller
     /**
      * @param $post
      */
-    public function store($smarty, $post)
+    public function store($smarty , $post)
     {
         ($this->modelName)::create($post);
-        //return $this->index($smarty);
+        return $this->index($smarty);
     }
 
     /**
