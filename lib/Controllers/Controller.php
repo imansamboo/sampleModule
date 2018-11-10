@@ -15,9 +15,17 @@ abstract class Controller
 {
     protected $modelName;
 
+    /**
+     * Controller constructor.
+     */
     public function __construct()
     {
-        echo 44444;
+        echo '<pre>';
+        print_r($_SESSION);
+        echo '</pre>';
+        if(isset($_SESSION['uid'])){
+            echo 1;
+        }
     }
 
     /**

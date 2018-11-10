@@ -324,5 +324,6 @@ function addonmodule_clientarea($vars)
     $action = isset($_REQUEST['action']) ? $_REQUEST['action'] : '';
 
     $dispatcher = new ClientDispatcher();
+    //return addonmodule_output($vars);
     return $dispatcher->dispatch($action, $vars);
 }

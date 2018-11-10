@@ -23,12 +23,18 @@ class VAController extends Controller
         $this->template($smarty, __FUNCTION__ .'.php' ,  $model->all());
     }
 
+    /**
+     * @param $smarty
+     */
     public function indexVAInvoices($smarty)
     {
         $model = new Invoice();
         $this->template($smarty, __FUNCTION__ .'.php' ,  $model->where('tax' ,'>', 0)->get());
     }
 
+    /**
+     * @param $smarty
+     */
     public function indexNVAInvoices($smarty)
     {
         $model = new Invoice();
