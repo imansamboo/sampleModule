@@ -15,20 +15,18 @@ abstract class Controller
 {
     protected $modelName;
 
+    public function __construct()
+    {
+        echo 44444;
+    }
+
     /**
      * @param $smarty
      */
     public function index($smarty)
     {
         $model = new $this->modelName;
-        if(isset($_GET['api']) && $_GET['api'] == 'api'){
-            header('Content-Type: application/json');
-            echo json_encode($model->all());
-            exit();
-            //return json_encode($model->all());
-        }
         $this->template($smarty, __FUNCTION__ .'.php' ,  $model->all());
-        //$this->template(__FUNCTION__ .'.php',['args' => $model->all() , 'modelName'=> $model->name] );
     }
 
     /**

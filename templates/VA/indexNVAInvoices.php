@@ -16,10 +16,7 @@
     </nav>
     <div class="table-title">
         <div class="row">
-            <div class="col-sm-8"><h2>Table <b>Bought Items</b></h2></div>
-            <div class="col-sm-4" style="padding-top: 0px;padding-left: 91%;">
-                <a href="http://localhost/whmcs/admin/addonmodules.php?module=addonmodule&controller=VA&action=create"><button type="button" class="btn btn-info"><i></i> Add New</button></a>
-            </div>
+            <div class="col-sm-8"><h2>Table <b>Invoices without value added</b></h2></div>
         </div>
     </div>
     <table class="table">
@@ -35,10 +32,7 @@
                 <th>subtotal</th>
                 <th>credit</th>
                 <th>tax</th>
-                <th>tax2</th>
                 <th>total</th>
-                <th>taxrate</th>
-                <th>taxrate2</th>
                 <th>status</th>
                 <th>paymentmethod</th>
                 <th>notes</th>
@@ -57,10 +51,7 @@
                 <td>{$arg.subtotal}</td>
                 <td>{$arg.credit}</td>
                 <td>{$arg.tax}</td>
-                <td>{$arg.tax2}</td>
                 <td>{$arg.total}</td>
-                <td>{$arg.taxrate}</td>
-                <td>{$arg.taxrate2}</td>
                 <td>{$arg.status}</td>
                 <td>{$arg.paymentmethod}</td>
                 <td>{$arg.notes}</td>

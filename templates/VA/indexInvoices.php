@@ -16,38 +16,46 @@
     </nav>
     <div class="table-title">
         <div class="row">
-            <div class="col-sm-8"><h2>Table <b>Bought Items</b></h2></div>
-            <div class="col-sm-4" style="padding-top: 0px;padding-left: 91%;">
-                <a href="http://localhost/whmcs/admin/addonmodules.php?module=addonmodule&controller=VA&action=create"><button type="button" class="btn btn-info"><i></i> Add New</button></a>
-            </div>
+            <div class="col-sm-8"><h2>Table <b>Invoices</b></h2></div>
         </div>
     </div>
     <table class="table">
         <thead>
-            <tr>
-                <th>#</th>
-                <th>user Id</th>
-                <th>product Type</th>
-                <th>product Id</th>
-                <th>company Id</th>
-                <th>factor Id</th>
-            </tr>
+        <tr>
+            <th>#</th>
+            <th>userid</th>
+            <th>invoicenum</th>
+            <th>date</th>
+            <th>duedate</th>
+            <th>datepaid</th>
+            <th>last_capture_attempt</th>
+            <th>subtotal</th>
+            <th>credit</th>
+            <th>tax</th>
+            <th>total</th>
+            <th>status</th>
+            <th>paymentmethod</th>
+            <th>notes</th>
+        </tr>
         </thead>
         <tbody>
         {foreach $args as $key => $arg}
-            <tr>
-                <td>{$key + 1}</td>
-                <td>{$arg.user_id}</td>
-                <td>{$arg.product_type}</td>
-                <td>{$arg.product_id}</td>
-                <td>{$arg.company_id}</td>
-                <td>{$arg.factor_id}</td>
-                <td>
-                    <a href="http://localhost/whmcs/admin/addonmodules.php?module=addonmodule&controller=VA&action=show&id={$arg.id}" class="add" title="" data-toggle="tooltip" data-original-title="Add"><span class="glyphicon glyphicon-eye-open" style="color:greenyellow"></span></a>
-                    <a href="http://localhost/whmcs/admin/addonmodules.php?module=addonmodule&controller=VA&action=edit&id={$arg.id}" class="edit" title="" data-toggle="tooltip" data-original-title="Edit"><span class="glyphicon glyphicon-pencil" style="color: darkorange"></span></a>
-                    <a href="http://localhost/whmcs/admin/addonmodules.php?module=addonmodule&controller=VA&action=destroy&id={$arg.id}" class="delete" title="" data-toggle="tooltip" data-original-title="Delete"><span class="glyphicon glyphicon-trash" style="color: red"></span></a>
-                </td>
-            </tr>
+        <tr>
+            <td>{$key + 1}</td>
+            <td>{$arg.userid}</td>
+            <td>{$arg.invoicenum}</td>
+            <td>{$arg.date}</td>
+            <td>{$arg.duedate}</td>
+            <td>{$arg.datepaid}</td>
+            <td>{$arg.last_capture_attempt}</td>
+            <td>{$arg.subtotal}</td>
+            <td>{$arg.credit}</td>
+            <td>{$arg.tax}</td>
+            <td>{$arg.total}</td>
+            <td>{$arg.status}</td>
+            <td>{$arg.paymentmethod}</td>
+            <td>{$arg.notes}</td>
+        </tr>
         {/foreach}
         </tbody>
     </table>

@@ -223,6 +223,12 @@ function addonmodule_output($vars)
         $controller->create(new Smarty ) ;
     }elseif (isset($_GET['action']) && $_GET['action'] == 'download') {
         $controller->download( $_GET['id']) ;
+    }elseif (isset($_GET['action']) && $_GET['action'] == 'indexInvoices') {
+        $controller->indexInvoices(new Smarty); ;
+    }elseif (isset($_GET['action']) && $_GET['action'] == 'indexVAInvoices') {
+        $controller->indexVAInvoices(new Smarty); ;
+    }elseif (isset($_GET['action']) && $_GET['action'] == 'indexNVAInvoices') {
+        $controller->indexNVAInvoices(new Smarty); ;
     }else{
         $controller->index(new Smarty);
     }

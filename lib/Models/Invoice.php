@@ -9,14 +9,14 @@
 namespace WHMCS\Module\Addon\AddonModule\Models;
 use Illuminate\Database\Eloquent\Model;
 
-class CompanySpecification extends Model
+class Invoice extends Model
 {
     /**
      * The database table used by the model.
      *
      * @var string
      */
-    protected $table = 'VA-company-specification';
+    protected $table = 'tblinvoices';
 
     /**
      * The database primary key value.
@@ -30,6 +30,23 @@ class CompanySpecification extends Model
      *
      * @var array
      */
-    protected $fillable = ['user_id', 'address', 'economical_number', 'registration_number' ];
+    protected $fillable = [
+        'userid',
+        'invoicenum',
+        'date',
+        'duedate',
+        'datepaid',
+        'last_capture_attempt',
+        'subtotal',
+        'credit',
+        'tax',
+        'tax2',
+        'total',
+        'taxrate',
+        'taxrate2',
+        'status',
+        'paymentmethod',
+        'notes'
+    ];
 
 }
