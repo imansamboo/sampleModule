@@ -232,34 +232,6 @@ function addonmodule_output($vars)
     }else{
         $controller->index(new Smarty);
     }
-    // Get common module parameters
-   /* $modulelink = $vars['modulelink']; // eg. addonmodules.php?module=addonmodule
-    $version = $vars['version']; // eg. 1.0
-    $_lang = $vars['_lang']; // an array of the currently loaded language variables
-
-    // Get module configuration parameters
-    $configTextField = $vars['Text Field Name'];
-    $configPasswordField = $vars['Password Field Name'];
-    $configCheckboxField = $vars['Checkbox Field Name'];
-    $configDropdownField = $vars['Dropdown Field Name'];
-    $configRadioField = $vars['Radio Field Name'];
-    $configTextareaField = $vars['Textarea Field Name'];
-
-    // Dispatch and handle request here. What follows is a demonstration of one
-    // possible way of handling this using a very basic dispatcher implementation.
-
-    $action = isset($_REQUEST['action']) ? $_REQUEST['action'] : '';
-    //new Iman();
-
-    $twig = new WHMCS\Module\Addon\AddonModule\Controllers\CompanySpecificationController();
-    $twig->test();*/
-    /*echo '<pre>';
-    print_r(WHMCS\Module\Addon\AddonModule\Models\CompanySpecification::all());
-    echo '</pre>';*/
-    /*$dispatcher = new AdminDispatcher();
-    $response = $dispatcher->dispatch($action, $vars);
-    echo $response;*/
-
 }
 
 /**
@@ -305,25 +277,40 @@ function addonmodule_sidebar($vars)
  */
 function addonmodule_clientarea($vars)
 {
-    // Get common module parameters
-    $modulelink = $vars['modulelink']; // eg. index.php?m=addonmodule
-    $version = $vars['version']; // eg. 1.0
-    $_lang = $vars['_lang']; // an array of the currently loaded language variables
-
-    // Get module configuration parameters
-    $configTextField = $vars['Text Field Name'];
-    $configPasswordField = $vars['Password Field Name'];
-    $configCheckboxField = $vars['Checkbox Field Name'];
-    $configDropdownField = $vars['Dropdown Field Name'];
-    $configRadioField = $vars['Radio Field Name'];
-    $configTextareaField = $vars['Textarea Field Name'];
-
-    // Dispatch and handle request here. What follows is a demonstration of one
-    // possible way of handling this using a very basic dispatcher implementation.
-
-    $action = isset($_REQUEST['action']) ? $_REQUEST['action'] : '';
-
-    $dispatcher = new ClientDispatcher();
-    //return addonmodule_output($vars);
-    return $dispatcher->dispatch($action, $vars);
+    if(isset($_GET['controller'])){
+        $controller = 'WHMCS\Module\Addon\AddonModule\Client\Controllers'. "\\". $_GET['controller'];
+    }else{
+        $controller = 'WHMCS\Module\Addon\AddonModule\Client\Controllers\CompanySpecification';
+    }
+    $controller .= 'Controller';
+    try {
+        $controller = new $controller;
+    }
+//catch exception
+    catch(Exception $e) {
+        echo 'Message: ' .$e->getMessage();
+    }
+    if(isset($_GET['action']) && $_GET['action'] == 'store') {
+        $controller->store(new Smarty, array_diff_key($_POST,array('token'=>rand()))) ;
+    }elseif (isset($_GET['action']) && $_GET['action'] == 'update' && isset($_GET['id'])) {
+        $controller->update(new Smarty, $_POST, $_GET['id']) ;
+    }elseif (isset($_GET['action']) && $_GET['action'] == 'destroy' && isset($_GET['id'])) {
+        $controller->destroy(new Smarty, $_GET['id']) ;
+    }elseif (isset($_GET['action']) && $_GET['action'] == 'edit' && isset($_GET['id'])) {
+        $controller->edit(new Smarty, $_GET['id']) ;
+    }elseif (isset($_GET['action']) && $_GET['action'] == 'show' && isset($_GET['id'])) {
+        $controller->show(new Smarty, $_GET['id']) ;
+    }elseif (isset($_GET['action']) && $_GET['action'] == 'create') {
+        $controller->create(new Smarty ) ;
+    }elseif (isset($_GET['action']) && $_GET['action'] == 'download') {
+        $controller->download( $_GET['id']) ;
+    }elseif (isset($_GET['action']) && $_GET['action'] == 'indexInvoices') {
+        $controller->indexInvoices(new Smarty); ;
+    }elseif (isset($_GET['action']) && $_GET['action'] == 'indexVAInvoices') {
+        $controller->indexVAInvoices(new Smarty); ;
+    }elseif (isset($_GET['action']) && $_GET['action'] == 'indexNVAInvoices') {
+        $controller->indexNVAInvoices(new Smarty); ;
+    }else{
+        $controller->index(new Smarty);
+    }
 }
