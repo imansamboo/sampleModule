@@ -20,7 +20,7 @@ class VAController extends Controller
     public function indexInvoices($smarty)
     {
         $model = new Invoice();
-        $this->template($smarty, __FUNCTION__ .'.php' ,  $model->all());
+        $this->template($smarty, __FUNCTION__ .'.php' ,  $model->where('userid', '=', $_SESSION['uid'])->get());
     }
 
     /**
@@ -29,7 +29,7 @@ class VAController extends Controller
     public function indexVAInvoices($smarty)
     {
         $model = new Invoice();
-        $this->template($smarty, __FUNCTION__ .'.php' ,  $model->where('tax' ,'>', 0)->get());
+        $this->template($smarty, __FUNCTION__ .'.php' ,  $model->where('tax' ,'>', 0)->where('userid', '=', $_SESSION['uid'])->get());
     }
 
     /**
@@ -38,6 +38,6 @@ class VAController extends Controller
     public function indexNVAInvoices($smarty)
     {
         $model = new Invoice();
-        $this->template($smarty, __FUNCTION__ .'.php' ,  $model->where('tax' ,'=', 0)->get());
+        $this->template($smarty, __FUNCTION__ .'.php' ,  $model->where('tax' ,'=', 0)->where('userid', '=', $_SESSION['uid'])->get());
     }
 }

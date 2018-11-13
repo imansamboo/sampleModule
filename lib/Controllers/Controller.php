@@ -16,25 +16,17 @@ abstract class Controller
     protected $modelName;
 
     /**
-     * Controller constructor.
-     */
-    public function __construct()
-    {
-        echo '<pre>';
-        print_r($_SESSION);
-        echo '</pre>';
-        if(isset($_SESSION['uid'])){
-            echo 1;
-        }
-    }
-
-    /**
      * @param $smarty
+     * @return string
      */
     public function index($smarty)
     {
         $model = new $this->modelName;
-        $this->template($smarty, __FUNCTION__ .'.php' ,  $model->all());
+        if(isset($_GET['api']) && $_GET['api'] == 'api'){
+            return json_encode($model->all());
+        }else{
+            $this->template($smarty, __FUNCTION__ .'.php' ,  $model->all());
+        }
     }
 
     /**

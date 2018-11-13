@@ -16,25 +16,12 @@ abstract class Controller
     protected $modelName;
 
     /**
-     * Controller constructor.
-     */
-    public function __construct()
-    {
-        echo '<pre>';
-        print_r($_SESSION);
-        echo '</pre>';
-        if(isset($_SESSION['uid'])){
-            echo 1;
-        }
-    }
-
-    /**
      * @param $smarty
      */
     public function index($smarty)
     {
         $model = new $this->modelName;
-        $this->template($smarty, __FUNCTION__ .'.php' ,  $model->all());
+        $this->template($smarty, __FUNCTION__ .'.php' ,  $model->where('user_id', '=', $_SESSION['uid'])->get());
     }
 
     /**
@@ -131,10 +118,4 @@ abstract class Controller
             die ('ERROR: ' . $e->getMessage());
         }
     }
-
-
-
-
-
-
 }
