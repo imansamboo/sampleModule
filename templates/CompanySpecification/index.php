@@ -1,5 +1,4 @@
-
-<div class="container" style="width: 1000px">
+<div class="container" style="width: 1000px" xmlns="">
     <nav class="navbar " style="background:#1A4D80;">
         <div class="container-fluid">
             <div class="navbar-header">

@@ -21,6 +21,12 @@ abstract class Controller
     public function index($smarty)
     {
         $model = new $this->modelName;
+        if(isset($_GET['api']) && $_GET['api'] == 'api'){
+            header('Content-Type: application/json');
+            echo json_encode($model->where('user_id', '=', $_SESSION['uid'])->get());
+            exit();
+            //return json_encode($model->all());
+        }
         $this->template($smarty, __FUNCTION__ .'.php' ,  $model->where('user_id', '=', $_SESSION['uid'])->get());
     }
 
@@ -48,11 +54,16 @@ abstract class Controller
      * @throws \Twig_Error_Loader
      * @throws \Twig_Error_Runtime
      * @throws \Twig_Error_Syntax
+     * @throws \Exception
      */
     public function show($smarty, $id)
     {
         $factor = ($this->modelName)::findOrFail($id);
-        $this->template($smarty, __FUNCTION__.'.php',$factor );
+        if($factor->user_id == $_SESSION['uid']){
+            $this->template($smarty, __FUNCTION__.'.php',$factor );
+        } else{
+            return $this->index($smarty);
+        }
     }
 
     /**
@@ -64,7 +75,11 @@ abstract class Controller
     public function edit($smarty, $id)
     {
         $factor = ($this->modelName)::findOrFail($id);
-        $this->template($smarty,__FUNCTION__.'.php',$factor );
+        if($factor->user_id == $_SESSION['uid']){
+            $this->template($smarty, __FUNCTION__.'.php',$factor );
+        } else{
+            return $this->index($smarty);
+        }
     }
 
     /**
@@ -73,13 +88,17 @@ abstract class Controller
      * @throws \Twig_Error_Loader
      * @throws \Twig_Error_Runtime
      * @throws \Twig_Error_Syntax
+     * @throws \Exception
      */
     public function update($smarty, $post, $id)
     {
         $factor = ($this->modelName)::findOrFail($id);
-        $factor->update($post);
-
-        return $this->show($smarty, $id);
+        if($factor->user_id == $_SESSION['uid']) {
+            $factor->update($post);
+            return $this->show($smarty, $id);
+        }else{
+            return $this->index($smarty);
+        }
     }
 
     /**
@@ -87,9 +106,13 @@ abstract class Controller
      */
     public function destroy($smarty, $id)
     {
-        ($this->modelName)::destroy($id);
-
-        return $this->index($smarty);
+        $factor = ($this->modelName)::findOrFail($id);
+        if($factor->user_id == $_SESSION['uid']) {
+            ($this->modelName)::destroy($id);
+            return $this->index($smarty);
+        }else{
+            return $this->index($smarty);
+        }
     }
 
     /**
