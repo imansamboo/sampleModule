@@ -137,7 +137,7 @@ function addonmodule_activate()
     full_query($query);
 
     //create company specification table
-    $query = "CREATE TABLE `whmcs`.`VA-company-specification` ( `id` INT NOT NULL AUTO_INCREMENT , `user_id` INT NOT NULL , `address` TEXT NOT NULL , `economical_number` INT NOT NULL , `registration_number` INT NOT NULL , `created_at` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP , `updated_at` TIMESTAMP on update CURRENT_TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP , PRIMARY KEY (`id`)) ENGINE = InnoDB;";
+    $query = "CREATE TABLE `whmcs`.`VA-company-specification` ( `id` INT NOT NULL AUTO_INCREMENT ,`name` VARCHAR(255) NOT NULL,`visibility` BOOLEAN NOT NULL DEFAULT TRUE , `user_id` INT NOT NULL , `address` TEXT NOT NULL , `economical_number` INT NOT NULL , `registration_number` INT NOT NULL , `created_at` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP , `updated_at` TIMESTAMP on update CURRENT_TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP , PRIMARY KEY (`id`)) ENGINE = InnoDB;";
     full_query($query);
 
     //create factor  table
@@ -196,6 +196,7 @@ function addonmodule_upgrade($vars)
 }
 function addonmodule_output($vars)
 {
+
     if(isset($_GET['controller'])){
         $controller = 'WHMCS\Module\Addon\AddonModule\Controllers'. "\\". $_GET['controller'];
     }else{

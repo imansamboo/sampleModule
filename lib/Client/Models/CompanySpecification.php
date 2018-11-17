@@ -30,6 +30,6 @@ class CompanySpecification extends Model
      *
      * @var array
      */
-    protected $fillable = ['user_id', 'address', 'economical_number', 'registration_number' ];
+    protected $fillable = ['user_id', 'address', 'economical_number', 'registration_number', 'visibility', 'name'];
 
 }

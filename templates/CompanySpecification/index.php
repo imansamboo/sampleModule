@@ -28,10 +28,12 @@
         <thead>
             <tr>
                 <th>#</th>
+                <th>Name</th>
                 <th>userID</th>
                 <th>Address</th>
                 <th>Economical Number</th>
                 <th>Registration Number</th>
+                <th>Visibility</th>
                 <th>Actions</th>
             </tr>
         </thead>
@@ -39,10 +41,12 @@
             {foreach $args as $key => $arg}
                 <tr>
                     <td>{$key +1}</td>
+                    <td>{$arg.name}</td>
                     <td>{$arg.user_id}</td>
                     <td>{$arg.address}</td>
                     <td>{$arg.economical_number}</td>
                     <td>{$arg.registration_number}</td>
+                    <td>{$arg.visibility}</td>
                     <td>
 
                         <a href="http://localhost/whmcs/admin/addonmodules.php?module=addonmodule&controller=CompanySpecification&action=show&id={$arg.id}" class="add" title="" data-toggle="tooltip" data-original-title="Add"><span class="glyphicon glyphicon-eye-open" style="color:greenyellow"></span></a>

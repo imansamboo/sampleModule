@@ -41,6 +41,20 @@
 
 
         </div><!-- /.row -->
+        <div class="row" style="padding: 1%">
+            <div class="col-lg-6">
+                <div class="input-group">
+      <span class="input-group-btn">
+        <button class="btn btn-default" type="button">name</button>
+      </span>
+                    <input id="name" required name="name" type= "text" class="form-control" placeholder="Enter name">
+                </div>
+                <!-- /input-group -->
+            </div>
+            <!-- /.col-lg-6 -->
+
+
+        </div><!-- /.row -->
         <div class="input-group"  style="padding: 1%">
             <span class="input-group-addon" id="basic-addon1">Address</span>
             <input id="address" required type="text" class="form-control" placeholder="Address" aria-describedby="basic-addon1" name="address"   >     </div>
@@ -51,6 +65,14 @@
         <button class="btn btn-default" type="button">Economical Number</button>
       </span>
                     <input id="economical_number" required name="economical_number" type="text" class="form-control" placeholder="Enter Economical Number">
+                </div><!-- /input-group -->
+            </div><!-- /.col-lg-6 -->
+            <div class="col-lg-6">
+                <div class="input-group">
+      <span class="input-group-btn">
+        <button class="btn btn-default" type="button">Visibility</button>
+      </span>
+                    <input id="visibility" required name="visibility" type="text" class="form-control" placeholder="Enter Visibility">
                 </div><!-- /input-group -->
             </div><!-- /.col-lg-6 -->
             <div class="col-lg-6">

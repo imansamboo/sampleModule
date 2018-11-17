@@ -422,6 +422,7 @@
         <thead>
             <tr>
                 <th>#</th>
+                <th>Name</th>
                 <th>userID</th>
                 <th>Address</th>
                 <th>Economical Number</th>
@@ -433,6 +434,7 @@
             {foreach $args as $key => $arg}
                 <tr>
                     <td>{$key +1}</td>
+                    <td>{$arg.name}</td>
                     <td>{$arg.user_id}</td>
                     <td>{$arg.address}</td>
                     <td>{$arg.economical_number}</td>

@@ -416,13 +416,13 @@
             <div class="col-lg-6">
                 <div class="input-group">
       <span class="input-group-btn">
-        <button class="btn btn-default" type="button">username</button>
+        <button class="btn btn-default" type="button">Name</button>
       </span>
-                    <input required name="user_id" type= "text" class="form-control" placeholder="Enter username">
-                </div>
-                <!-- /input-group -->
-            </div>
-            <!-- /.col-lg-6 -->
+                    <input required name="name" type="text" class="form-control" placeholder="Enter Name">
+                </div><!-- /input-group -->
+            </div><!-- /.col-lg-6 -->
+        </div><!-- /.row -->
+        <div class="row" style="padding: 1%">
             <div class="col-lg-6">
                 <div class="input-group">
       <span class="input-group-btn">

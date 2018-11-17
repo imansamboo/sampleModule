@@ -3,26 +3,19 @@
   <component name="ChangeListManager">
     <list default="true" id="4651bada-27fc-41dd-90d2-3bb23612d9ec" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/Client/Controllers/Controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Client/Controllers/Controller.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/addonmodule.php" beforeDir="false" afterPath="$PROJECT_DIR$/addonmodule.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/Client/Controllers/CompanySpecificationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Client/Controllers/CompanySpecificationController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/Client/Models/CompanySpecification.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Client/Models/CompanySpecification.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/Client/templates/CompanySpecification/create.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Client/templates/CompanySpecification/create.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/Client/templates/CompanySpecification/edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Client/templates/CompanySpecification/edit.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/Client/templates/CompanySpecification/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Client/templates/CompanySpecification/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/Client/templates/CompanySpecification/show.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Client/templates/CompanySpecification/show.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/Client/templates/VA/create.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Client/templates/VA/create.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/Client/templates/VA/edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Client/templates/VA/edit.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/Client/templates/VA/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Client/templates/VA/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/Client/templates/VA/indexInvoices.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Client/templates/VA/indexInvoices.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/Client/templates/VA/indexNVAInvoices.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Client/templates/VA/indexNVAInvoices.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/Client/templates/VA/indexVAInvoices.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Client/templates/VA/indexVAInvoices.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/Client/templates/VA/show.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Client/templates/VA/show.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/Client/templates/VAFactor/create.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Client/templates/VAFactor/create.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/Client/templates/VAFactor/edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Client/templates/VAFactor/edit.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/Client/templates/VAFactor/form.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Client/templates/VAFactor/form.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/Client/templates/VAFactor/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Client/templates/VAFactor/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/Client/templates/VAFactor/show.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Client/templates/VAFactor/show.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/Controllers/Controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Controllers/Controller.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/Models/CompanySpecification.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Models/CompanySpecification.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/CompanySpecification/create.php" beforeDir="false" afterPath="$PROJECT_DIR$/templates/CompanySpecification/create.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/CompanySpecification/edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/templates/CompanySpecification/edit.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/CompanySpecification/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/templates/CompanySpecification/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/CompanySpecification/show.php" beforeDir="false" afterPath="$PROJECT_DIR$/templates/CompanySpecification/show.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -47,105 +40,87 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/Client/templates/VAFactor/index.php">
+      <file leaf-file-name="Controller.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/Client/Controllers/Controller.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="420" column="16" lean-forward="true" selection-start-line="420" selection-start-column="16" selection-end-line="420" selection-end-column="16" />
+            <state relative-caret-position="327">
+              <caret line="38" column="5" lean-forward="true" selection-start-line="38" selection-start-column="5" selection-end-line="38" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="addonmodule.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/addonmodule.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="315">
+              <caret line="294" column="39" lean-forward="true" selection-start-line="294" selection-start-column="39" selection-end-line="294" selection-end-column="84" />
               <folding>
-                <element signature="n#style#0;n#a#0;n#li#2;n#ul#0;n#div#0;n#div#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#0;n#li#3;n#ul#0;n#div#0;n#div#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#0;n#li#4;n#ul#0;n#div#0;n#div#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#0;n#li#5;n#ul#0;n#div#0;n#div#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="e#1424#1476#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/CompanySpecification/index.php">
+      <file leaf-file-name="CompanySpecificationController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/Client/Controllers/CompanySpecificationController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="386">
-              <caret line="57" selection-start-line="57" selection-end-line="57" />
+            <state relative-caret-position="495">
+              <caret line="74" column="44" selection-start-line="74" selection-start-column="44" selection-end-line="74" selection-end-column="44" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="create.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/templates/CompanySpecification/create.php">
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/Client/templates/CompanySpecification/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="326">
-              <caret line="67" column="42" selection-start-line="67" selection-start-column="24" selection-end-line="67" selection-end-column="42" />
+            <state relative-caret-position="495">
+              <caret line="436" column="34" selection-start-line="436" selection-start-column="34" selection-end-line="436" selection-end-column="34" />
               <folding>
-                <element signature="n#style#0;n#a#0;n#li#2;n#ul#0;n#div#0;n#div#0;n#nav#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#0;n#li#3;n#ul#0;n#div#0;n#div#0;n#nav#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#0;n#li#4;n#ul#0;n#div#0;n#div#0;n#nav#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#0;n#li#5;n#ul#0;n#div#0;n#div#0;n#nav#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#head#0;n#html#0;n#!!top" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="show.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/Client/templates/VAFactor/show.php">
+      <file leaf-file-name="edit.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/lib/Client/templates/CompanySpecification/edit.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-900">
-              <caret line="3" column="2" lean-forward="true" selection-end-line="3" selection-end-column="2" />
+            <state relative-caret-position="344">
+              <caret line="427" selection-start-line="427" selection-end-line="427" />
+              <folding>
+                <element signature="n#style#0;n#div#1;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="indexNVAInvoices.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/Client/templates/VA/indexNVAInvoices.php">
+      <file leaf-file-name="CompanySpecification.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/Client/Models/CompanySpecification.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5895">
-              <caret line="393" column="10" selection-start-line="393" selection-start-column="10" selection-end-line="393" selection-end-column="10" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="indexVAInvoices.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/Client/templates/VA/indexVAInvoices.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5895">
-              <caret line="393" column="10" selection-start-line="393" selection-start-column="10" selection-end-line="393" selection-end-column="10" />
+            <state relative-caret-position="105">
+              <caret line="12" column="1" lean-forward="true" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="show.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/Client/templates/VA/show.php">
+        <entry file="file://$PROJECT_DIR$/lib/Client/templates/CompanySpecification/show.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5895">
-              <caret line="393" column="10" selection-start-line="393" selection-start-column="10" selection-end-line="393" selection-end-column="10" />
+            <state relative-caret-position="480">
+              <caret line="416" column="28" selection-start-line="416" selection-start-column="28" selection-end-line="416" selection-end-column="28" />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="create.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/Client/templates/VAFactor/create.php">
+        <entry file="file://$PROJECT_DIR$/lib/Client/templates/CompanySpecification/create.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5895">
-              <caret line="393" column="10" selection-start-line="393" selection-start-column="10" selection-end-line="393" selection-end-column="10" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="edit.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/Client/templates/VAFactor/edit.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5895">
-              <caret line="393" column="10" selection-start-line="393" selection-start-column="10" selection-end-line="393" selection-end-column="10" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="form.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/Client/templates/VAFactor/form.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5895">
-              <caret line="393" column="10" selection-start-line="393" selection-start-column="10" selection-end-line="393" selection-end-column="10" />
+            <state relative-caret-position="76">
+              <caret line="424" column="45" selection-start-line="424" selection-start-column="45" selection-end-line="424" selection-end-column="45" />
+              <folding>
+                <element signature="n#div#1;n#div#0;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#style#0;n#div#1;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -197,26 +172,18 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/templates/VA/edit.php" />
-        <option value="$PROJECT_DIR$/templates/VA/index.php" />
-        <option value="$PROJECT_DIR$/templates/VA/indexInvoices.php" />
-        <option value="$PROJECT_DIR$/templates/VA/indexNVAInvoices.php" />
         <option value="$PROJECT_DIR$/templates/VA/indexVAInvoices.php" />
         <option value="$PROJECT_DIR$/templates/VAFactor/create.php" />
         <option value="$PROJECT_DIR$/templates/VAFactor/edit.php" />
         <option value="$PROJECT_DIR$/templates/VAFactor/index.php" />
         <option value="$PROJECT_DIR$/templates/VAFactor/show.php" />
-        <option value="$PROJECT_DIR$/../../../includes/hooks/imanInvoice.php" />
         <option value="$PROJECT_DIR$/lib/Client/Controllers/Iman.php" />
-        <option value="$PROJECT_DIR$/lib/Client/Models/CompanySpecification.php" />
         <option value="$PROJECT_DIR$/lib/Client/Models/Invoice.php" />
         <option value="$PROJECT_DIR$/lib/Client/Models/model.php" />
         <option value="$PROJECT_DIR$/lib/Client/Models/VA.php" />
         <option value="$PROJECT_DIR$/lib/Client/Models/VAFactor.php" />
-        <option value="$PROJECT_DIR$/lib/Client/Controllers/CompanySpecificationController.php" />
         <option value="$PROJECT_DIR$/lib/Client/Controllers/VAFactorController.php" />
         <option value="$PROJECT_DIR$/lib/Client/templates/VAFactor/menu.tpl" />
-        <option value="$PROJECT_DIR$/addonmodule.php" />
         <option value="$PROJECT_DIR$/lib/Client/templates/VA/menu.tpl" />
         <option value="$PROJECT_DIR$/lib/Client/templates/CompanySpecification/page_header.tpl" />
         <option value="$PROJECT_DIR$/lib/Client/templates/CompanySpecification/page_footer.tpl" />
@@ -224,16 +191,11 @@
         <option value="$PROJECT_DIR$/../../../templates/six/includes/head.tpl" />
         <option value="$PROJECT_DIR$/../../../templates/six/header.tpl" />
         <option value="$PROJECT_DIR$/lib/Client/Controllers/VAController.php" />
-        <option value="$PROJECT_DIR$/lib/Controllers/Controller.php" />
         <option value="$PROJECT_DIR$/../../../assets/js/iman.js" />
         <option value="$PROJECT_DIR$/../../../assets/js/imantax.js" />
         <option value="$PROJECT_DIR$/../../../templates/orderforms/standard_cart/configureproduct.tpl" />
         <option value="$PROJECT_DIR$/lib/Client/Controllers/Controller.php" />
         <option value="$PROJECT_DIR$/../../../assets/js/imanCheckFinancial.js" />
-        <option value="$PROJECT_DIR$/lib/Client/templates/CompanySpecification/index.php" />
-        <option value="$PROJECT_DIR$/lib/Client/templates/CompanySpecification/edit.php" />
-        <option value="$PROJECT_DIR$/lib/Client/templates/CompanySpecification/create.php" />
-        <option value="$PROJECT_DIR$/lib/Client/templates/CompanySpecification/show.php" />
         <option value="$PROJECT_DIR$/lib/Client/templates/VA/create.php" />
         <option value="$PROJECT_DIR$/lib/Client/templates/VA/edit.php" />
         <option value="$PROJECT_DIR$/lib/Client/templates/VA/index.php" />
@@ -246,8 +208,21 @@
         <option value="$PROJECT_DIR$/lib/Client/templates/VAFactor/form.php" />
         <option value="$PROJECT_DIR$/lib/Client/templates/VAFactor/index.php" />
         <option value="$PROJECT_DIR$/lib/Client/templates/VAFactor/show.php" />
-        <option value="$PROJECT_DIR$/templates/CompanySpecification/index.php" />
+        <option value="$PROJECT_DIR$/../../../includes/hooks/imanInvoice.php" />
+        <option value="$PROJECT_DIR$/lib/Controllers/Controller.php" />
+        <option value="$PROJECT_DIR$/lib/Controllers/CompanySpecificationController.php" />
+        <option value="$PROJECT_DIR$/lib/Client/Models/CompanySpecification.php" />
+        <option value="$PROJECT_DIR$/addonmodule.php" />
+        <option value="$PROJECT_DIR$/templates/CompanySpecification/edit.php" />
         <option value="$PROJECT_DIR$/templates/CompanySpecification/create.php" />
+        <option value="$PROJECT_DIR$/templates/CompanySpecification/index.php" />
+        <option value="$PROJECT_DIR$/templates/CompanySpecification/show.php" />
+        <option value="$PROJECT_DIR$/lib/Models/CompanySpecification.php" />
+        <option value="$PROJECT_DIR$/lib/Client/templates/CompanySpecification/index.php" />
+        <option value="$PROJECT_DIR$/lib/Client/templates/CompanySpecification/show.php" />
+        <option value="$PROJECT_DIR$/lib/Client/Controllers/CompanySpecificationController.php" />
+        <option value="$PROJECT_DIR$/lib/Client/templates/CompanySpecification/create.php" />
+        <option value="$PROJECT_DIR$/lib/Client/templates/CompanySpecification/edit.php" />
       </list>
     </option>
   </component>
@@ -291,7 +266,48 @@
               <item name="addonmodule" type="b2602c69:ProjectViewProjectNode" />
               <item name="addonmodule" type="462c0819:PsiDirectoryNode" />
               <item name="lib" type="462c0819:PsiDirectoryNode" />
+              <item name="Client" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="addonmodule" type="b2602c69:ProjectViewProjectNode" />
+              <item name="addonmodule" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+              <item name="Client" type="462c0819:PsiDirectoryNode" />
               <item name="Controllers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="addonmodule" type="b2602c69:ProjectViewProjectNode" />
+              <item name="addonmodule" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+              <item name="Client" type="462c0819:PsiDirectoryNode" />
+              <item name="Models" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="addonmodule" type="b2602c69:ProjectViewProjectNode" />
+              <item name="addonmodule" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+              <item name="Client" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="addonmodule" type="b2602c69:ProjectViewProjectNode" />
+              <item name="addonmodule" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+              <item name="Client" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="CompanySpecification" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="addonmodule" type="b2602c69:ProjectViewProjectNode" />
+              <item name="addonmodule" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+              <item name="Controllers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="addonmodule" type="b2602c69:ProjectViewProjectNode" />
+              <item name="addonmodule" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+              <item name="Models" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="addonmodule" type="b2602c69:ProjectViewProjectNode" />
@@ -378,11 +394,12 @@
       <workItem from="1542208836682" duration="9749000" />
       <workItem from="1542276438023" duration="984000" />
       <workItem from="1542280954856" duration="1698000" />
+      <workItem from="1542466025415" duration="9278000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="155245000" />
+    <option name="totallyTimeSpent" value="164523000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1373" height="875" extended-state="6" />
@@ -393,9 +410,9 @@
       <window_info anchor="bottom" id="Database Changes" order="1" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="4" />
       <window_info anchor="bottom" id="Run" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="2" visible="true" weight="0.24528302" />
-      <window_info anchor="right" id="Remote Host" order="3" weight="0.32931423" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.27053505" />
+      <window_info anchor="bottom" id="Terminal" order="2" weight="0.24528302" />
+      <window_info anchor="right" id="Remote Host" order="4" weight="0.32931423" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.2750565" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="0" weight="0.32931423" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
@@ -410,6 +427,29 @@
       <window_info anchor="bottom" id="Cvs" order="9" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="6" />
     </layout>
+    <layout-to-restore>
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
+      <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Run" order="7" />
+      <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
+      <window_info anchor="right" id="Remote Host" order="4" weight="0.32931423" />
+      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.2750565" />
+      <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="1" type="SLIDING" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="11" />
+      <window_info anchor="bottom" id="Database Changes" order="1" show_stripe_button="false" />
+      <window_info anchor="bottom" id="TypeScript" order="12" />
+      <window_info anchor="bottom" id="Find" order="6" />
+      <window_info anchor="bottom" id="Cvs" order="9" weight="0.25" />
+      <window_info anchor="bottom" id="Debug" order="8" weight="0.4" />
+      <window_info anchor="right" id="Database" order="0" weight="0.32931423" />
+      <window_info anchor="bottom" id="Terminal" order="2" visible="true" weight="0.24528302" />
+      <window_info anchor="bottom" id="Event Log" order="3" side_tool="true" />
+      <window_info anchor="bottom" id="Inspection" order="10" weight="0.4" />
+      <window_info anchor="bottom" id="Version Control" order="4" />
+      <window_info anchor="bottom" id="Message" order="5" />
+      <window_info id="Favorites" order="0" side_tool="true" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -423,41 +463,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/templates/CompanySpecification/show.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="211" selection-start-line="13" selection-start-column="211" selection-end-line="13" selection-end-column="211" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/Controllers/VAFactorController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="13" column="1" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/VAFactor/show.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="211" selection-start-line="14" selection-start-column="211" selection-end-line="14" selection-end-column="211" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/VA/indexVAInvoices.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="18" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/Client/Models/Invoice.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/Client/Models/VA.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -469,13 +474,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
           <caret line="8" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/Client/Models/CompanySpecification.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="8" column="47" selection-start-line="8" selection-start-column="40" selection-end-line="8" selection-end-column="47" />
         </state>
       </provider>
     </entry>
@@ -498,13 +496,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/Client/templates/secretpage.tpl">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/Client/Models/model.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/Client/templates/CompanySpecification/page_header.php">
       <provider selected="true" editor-type-id="text-editor">
@@ -555,13 +546,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/Client/Controllers/CompanySpecificationController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="8" column="47" selection-start-line="8" selection-start-column="40" selection-end-line="8" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/Client/Controllers/Iman.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -582,9 +566,6 @@
           <caret line="2" column="42" selection-start-line="2" selection-start-column="41" selection-end-line="2" selection-end-column="47" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/Controllers/CompanySpecificationController.php">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/../../../assets/js/iman.js">
       <provider selected="true" editor-type-id="text-editor">
@@ -607,66 +588,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/addonmodule.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="282" column="60" selection-start-line="282" selection-start-column="60" selection-end-line="282" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../includes/hooks/imanInvoice.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-195">
-          <caret line="2" column="37" lean-forward="true" selection-start-line="2" selection-start-column="37" selection-end-line="2" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/Controllers/Controller.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="25" column="30" lean-forward="true" selection-start-line="25" selection-start-column="30" selection-end-line="25" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/Client/Controllers/Controller.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="28" column="9" lean-forward="true" selection-start-line="28" selection-start-column="9" selection-end-line="28" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../../../assets/js/imanCheckFinancial.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="11" column="1" lean-forward="true" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/Client/templates/CompanySpecification/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="393" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/Client/templates/CompanySpecification/edit.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="393" column="10" selection-start-line="393" selection-start-column="10" selection-end-line="393" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/Client/templates/CompanySpecification/create.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="393" column="10" selection-start-line="393" selection-start-column="10" selection-end-line="393" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/Client/templates/CompanySpecification/show.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="393" column="10" selection-start-line="393" selection-start-column="10" selection-end-line="393" selection-end-column="10" />
         </state>
       </provider>
     </entry>
@@ -742,41 +667,167 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/Client/templates/VAFactor/show.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-900">
+        <state relative-caret-position="45">
           <caret line="3" column="2" lean-forward="true" selection-end-line="3" selection-end-column="2" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/Client/templates/VAFactor/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="420" column="16" lean-forward="true" selection-start-line="420" selection-start-column="16" selection-end-line="420" selection-end-column="16" />
+        <state relative-caret-position="6300">
+          <caret line="420" column="16" selection-start-line="420" selection-start-column="16" selection-end-line="420" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../includes/hooks/imanInvoice.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="32" column="52" lean-forward="true" selection-start-line="32" selection-start-column="52" selection-end-line="32" selection-end-column="52" />
           <folding>
-            <element signature="n#style#0;n#a#0;n#li#2;n#ul#0;n#div#0;n#div#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#li#3;n#ul#0;n#div#0;n#div#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#li#4;n#ul#0;n#div#0;n#div#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#li#5;n#ul#0;n#div#0;n#div#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#6#33#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/CompanySpecification/index.php">
+    <entry file="file://$PROJECT_DIR$/lib/Controllers/VAController.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/Controllers/Controller.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="386">
-          <caret line="57" selection-start-line="57" selection-end-line="57" />
+        <state relative-caret-position="-915">
+          <caret line="15" column="21" lean-forward="true" selection-start-line="15" selection-start-column="21" selection-end-line="15" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/Controllers/CompanySpecificationController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="12" column="88" lean-forward="true" selection-start-line="12" selection-start-column="88" selection-end-line="12" selection-end-column="88" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/Client/Models/model.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/CompanySpecification/create.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="326">
-          <caret line="67" column="42" selection-start-line="67" selection-start-column="24" selection-end-line="67" selection-end-column="42" />
+        <state relative-caret-position="345">
+          <caret line="74" column="132" selection-start-line="74" selection-start-column="132" selection-end-line="74" selection-end-column="132" />
           <folding>
-            <element signature="n#style#0;n#a#0;n#li#2;n#ul#0;n#div#0;n#div#0;n#nav#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#li#3;n#ul#0;n#div#0;n#div#0;n#nav#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#li#4;n#ul#0;n#div#0;n#div#0;n#nav#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#li#5;n#ul#0;n#div#0;n#div#0;n#nav#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#div#0;n#form#0;n#div#0;n#!!top" />
+            <element signature="n#style#0;n#div#1;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#div#0;n#div#2;n#form#0;n#div#0;n#!!top" />
+            <element signature="n#style#0;n#button#0;n#div#2;n#div#3;n#form#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/Models/CompanySpecification.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="32" column="112" selection-start-line="32" selection-start-column="112" selection-end-line="32" selection-end-column="112" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/CompanySpecification/edit.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="615">
+          <caret line="41" column="36" lean-forward="true" selection-start-line="41" selection-start-column="36" selection-end-line="41" selection-end-column="36" />
+          <folding>
+            <element signature="n#style#0;n#div#1;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#div#1;n#form#0;n#div#0;n#!!top" />
+            <element signature="n#div#2;n#form#0;n#div#0;n#!!top" />
+            <element signature="n#div#3;n#form#0;n#div#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/CompanySpecification/show.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="28" column="60" selection-start-line="28" selection-start-column="60" selection-end-line="28" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/CompanySpecification/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="387">
+          <caret line="48" column="37" lean-forward="true" selection-start-line="48" selection-start-column="30" selection-end-line="48" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/Client/templates/CompanySpecification/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="436" column="34" selection-start-line="436" selection-start-column="34" selection-end-line="436" selection-end-column="34" />
+          <folding>
+            <element signature="n#style#0;n#head#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/Client/templates/CompanySpecification/show.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="416" column="28" selection-start-line="416" selection-start-column="28" selection-end-line="416" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/Client/Models/CompanySpecification.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="12" column="1" lean-forward="true" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/Client/Controllers/Controller.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="327">
+          <caret line="38" column="5" lean-forward="true" selection-start-line="38" selection-start-column="5" selection-end-line="38" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/addonmodule.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="294" column="39" lean-forward="true" selection-start-line="294" selection-start-column="39" selection-end-line="294" selection-end-column="84" />
+          <folding>
+            <element signature="e#1424#1476#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/Client/Controllers/CompanySpecificationController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="74" column="44" selection-start-line="74" selection-start-column="44" selection-end-line="74" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/Client/templates/CompanySpecification/create.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="424" column="45" selection-start-line="424" selection-start-column="45" selection-end-line="424" selection-end-column="45" />
+          <folding>
+            <element signature="n#div#1;n#div#0;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#style#0;n#div#1;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/Client/templates/CompanySpecification/edit.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="344">
+          <caret line="427" selection-start-line="427" selection-end-line="427" />
+          <folding>
+            <element signature="n#style#0;n#div#1;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>

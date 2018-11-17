@@ -44,6 +44,7 @@ abstract class Controller
 
     /**
      * @param $post
+     * @return string
      */
     public function store($smarty , $post)
     {
@@ -92,6 +93,7 @@ abstract class Controller
 
     /**
      * @param $id
+     * @return string
      */
     public function destroy($smarty, $id)
     {

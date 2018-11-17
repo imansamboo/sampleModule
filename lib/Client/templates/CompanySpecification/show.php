@@ -414,6 +414,7 @@
 
         <table id="w0" class="table table-striped table-bordered detail-view"><tbody>
                 <tr><th>ID</th><td>{$args.id}</td></tr>
+                <tr><th>Name</th><td>{$args.name}</td></tr>
                 <tr><th>userID</th><td>{$args.user_id}</td></tr>
                 <tr><th>Address</th><td>{$args.address}</td></tr>
                 <tr><th>Economical Number</th><td>{$args.economical_number}</td></tr>
