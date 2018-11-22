@@ -32,11 +32,9 @@
                 <th>datepaid</th>
                 <th>last_capture_attempt</th>
                 <th>subtotal</th>
-                <th>credit</th>
                 <th>tax</th>
                 <th>total</th>
                 <th>status</th>
-                <th>paymentmethod</th>
                 <th>add tax</th>
             </tr>
         </thead>
@@ -51,12 +49,10 @@
                 <td>{$arg.datepaid}</td>
                 <td>{$arg.last_capture_attempt}</td>
                 <td>{$arg.subtotal}</td>
-                <td>{$arg.credit}</td>
                 <td>{$arg.tax}</td>
                 <td>{$arg.total}</td>
                 <td>{$arg.status}</td>
-                <td>{$arg.paymentmethod}</td>
-                <td><a href="http://localhost/whmcs/admin/addonmodules.php?module=addonmodule&controller=VA&action=showNVAInvoices&id={$arg.id}"></a></td>
+                <td><a href="http://localhost/whmcs/admin/addonmodules.php?module=addonmodule&controller=VA&action=showNVAInvoices&id={$arg.id}">add tax</a></td>
             </tr>
         {/foreach}
         </tbody>

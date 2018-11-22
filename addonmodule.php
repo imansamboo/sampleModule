@@ -203,18 +203,7 @@ function addonmodule_upgrade($vars)
 }
 function addonmodule_output($vars)
 {
-    //$model = new WHMCS\Module\Addon\AddonModule\Models\VA();
-    //$model2 = new WHMCS\Module\Addon\AddonModule\Models\CompanySpecification();
-    //$model3 = new WHMCS\Module\Addon\AddonModule\Models\Invoice();
-    //print_r($model->find(3)->invoice->total);
-    //print_r($model->find(3)->company->id);
-    //echo '<pre>';
-    //print_r($model2->find(8)->va[0]->id);
-    //echo '</pre>';
-    //echo $model3->find(38)->va->id;
-    //exit();
-
-
+    //SELECT `VA-company-specification`.`id`, `tblinvoices`.`id` FROM `VA-company-specification` INNER JOIN `tblinvoices` on `VA-company-specification`.`user_id` = `tblinvoices`.`userId`
     if(isset($_GET['controller'])){
         $controller = 'WHMCS\Module\Addon\AddonModule\Controllers'. "\\". $_GET['controller'];
     }else{
@@ -243,11 +232,17 @@ function addonmodule_output($vars)
     }elseif (isset($_GET['action']) && $_GET['action'] == 'download') {
         $controller->download( $_GET['id']) ;
     }elseif (isset($_GET['action']) && $_GET['action'] == 'indexInvoices') {
-        $controller->indexInvoices(new Smarty); ;
+        $controller->indexInvoices(new Smarty);
     }elseif (isset($_GET['action']) && $_GET['action'] == 'indexVAInvoices') {
-        $controller->indexVAInvoices(new Smarty); ;
+        $controller->indexVAInvoices(new Smarty);
     }elseif (isset($_GET['action']) && $_GET['action'] == 'indexNVAInvoices') {
-        $controller->indexNVAInvoices(new Smarty); ;
+        $controller->indexNVAInvoices(new Smarty);
+    }elseif (isset($_GET['action']) && $_GET['action'] == 'showNVAInvoices') {
+        $controller->showNVAInvoices(new Smarty, $_GET['id']);
+    }elseif (isset($_GET['action']) && $_GET['action'] == 'createTaxed') {
+        $controller->createTaxed(new Smarty, $_GET['id']);
+    }elseif (isset($_GET['action']) && $_GET['action'] == 'storeTaxed') {
+        $controller->storeTaxed(new Smarty, $_POST['invoice_id'], $_POST['company_id']);
     }else{
         $controller->index(new Smarty);
     }
@@ -332,6 +327,8 @@ function addonmodule_clientarea($vars)
         $controller->showNVAInvoices(new Smarty, $_GET['id']);
     }elseif (isset($_GET['action']) && $_GET['action'] == 'createTaxed') {
         $controller->createTaxed(new Smarty, $_GET['id']);
+    }elseif (isset($_GET['action']) && $_GET['action'] == 'storeTaxed') {
+        $controller->storeTaxed(new Smarty, $_POST[''], $_POST['']);
     }else{
         $controller->index(new Smarty);
     }

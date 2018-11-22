@@ -42,9 +42,9 @@ class VAController extends Controller
         $this->template($smarty, __FUNCTION__ .'.php' ,  $model->where('tax' ,'=', 0)->get());
     }
 
-    public function showNVAInvoice($smarty, $id)
+    public function showNVAInvoices($smarty, $id)
     {
-        $factor = ($this->modelName)::findOrFail($id);
+        $factor = Invoice::findOrFail($id);
         $this->template($smarty, __FUNCTION__.'.php',$factor );
     }
 
@@ -54,7 +54,7 @@ class VAController extends Controller
      */
     public function createTaxed($smarty, $id)
     {
-        $invoice = ($this->modelName)::findOrFail($id);
+        $invoice = Invoice::findOrFail($id);
         $companys = CompanySpecification::where('user_id', '=', $invoice->userid)->get();
         $factor = array(
             'invoice' => $invoice,
@@ -67,7 +67,7 @@ class VAController extends Controller
      * @param $smarty
      * @param $invoiceId
      */
-    public function storeTaxed($smarty, $invoiceId)
+    public function storeTaxed($smarty, $invoiceId, $companyId)
     {
         $invoice = Invoice::findOrFail($invoiceId);
         $oldTotal = $invoice->total;
@@ -103,7 +103,7 @@ class VAController extends Controller
         }
         ($this->modelName)::create(
             array(
-                'company-id' => $_POST['company_id'],
+                'company-id' => $companyId,
                 'invoice-id' => $invoiceId,
             )
         );
