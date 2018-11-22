@@ -49,4 +49,11 @@ class Invoice extends Model
         'notes'
     ];
 
+    /**
+     * @return mixed
+     */
+    public function va()
+    {
+        return $this->hasOne(VA::class,   'invoice-id', 'id');
+    }
 }

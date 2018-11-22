@@ -23,8 +23,9 @@ class CompanySpecificationController extends Controller
             echo json_encode($model->where(
                 array(
                     ['user_id', '=', $_SESSION['uid']],
-                    ['visibility', '=', 1]))
-                ->get());
+                    ['visibility', '=', 1]
+                )
+            )->get());
             exit();
             //return json_encode($model->all());
         }

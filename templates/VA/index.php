@@ -28,22 +28,28 @@
         <thead>
             <tr>
                 <th>#</th>
-                <th>user Id</th>
-                <th>product Type</th>
-                <th>product Id</th>
-                <th>company Id</th>
-                <th>factor Id</th>
+                <th>id</th>
+                <th>invoice-id</th>
+                <th>company-id</th>
+                <th>invoice subtotal</th>
+                <th>invoice tax</th>
+                <th>invoice total</th>
+                <th>company address</th>
+                <th>company name</th>
             </tr>
         </thead>
         <tbody>
         {foreach $args as $key => $arg}
             <tr>
                 <td>{$key + 1}</td>
-                <td>{$arg.user_id}</td>
-                <td>{$arg.product_type}</td>
-                <td>{$arg.product_id}</td>
-                <td>{$arg.company_id}</td>
-                <td>{$arg.factor_id}</td>
+                <td>{$arg.id}</td>
+                <td>{$arg.invoice-id}</td>
+                <td>{$arg.company-id}</td>
+                <td>{$arg.invoice.subtotal}</td>
+                <td>{$arg.invoice.tax}</td>
+                <td>{$arg.invoice.total}</td>
+                <td>{$arg.company.address}</td>
+                <td>{$arg.company.name}</td>
                 <td>
                     <a href="http://localhost/whmcs/admin/addonmodules.php?module=addonmodule&controller=VA&action=show&id={$arg.id}" class="add" title="" data-toggle="tooltip" data-original-title="Add"><span class="glyphicon glyphicon-eye-open" style="color:greenyellow"></span></a>
                     <a href="http://localhost/whmcs/admin/addonmodules.php?module=addonmodule&controller=VA&action=edit&id={$arg.id}" class="edit" title="" data-toggle="tooltip" data-original-title="Edit"><span class="glyphicon glyphicon-pencil" style="color: darkorange"></span></a>

@@ -64,9 +64,22 @@
       <span class="input-group-btn">
         <button class="btn btn-default" type="button">Economical Number</button>
       </span>
-                    <input id="economical_number" required name="economical_number" type="text" class="form-control" placeholder="Enter Economical Number">
+                    <input id="economical_number" required name="economical_number" type="number" class="form-control" placeholder="Enter Economical Number">
+
                 </div><!-- /input-group -->
             </div><!-- /.col-lg-6 -->
+        </div>
+            <div class="row">
+                <div class="col-lg-6 alert">
+                    <div class="alert alert-danger help" role="alert" id="alert" >
+                        <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                        <span class="sr-only">Error:</span>
+                        Enter atleast 8 digits
+                    </div>
+                </div>
+            </div>
+
+<div class="row" >
             <div class="col-lg-6">
                 <div class="input-group">
       <span class="input-group-btn">
@@ -75,9 +88,13 @@
                     <input id="visibility" required name="visibility" type="text" class="form-control" placeholder="Enter Visibility">
                 </div><!-- /input-group -->
             </div><!-- /.col-lg-6 -->
-            <div class="col-lg-6">
-                <button class="btn btn-primary right" style="float: right; margin-right: 10%;">submit</button>
+</div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <button class="btn btn-primary right" style="float: right; margin-right: 10%;" id="submit">submit</button>
+                </div>
             </div>
+
         </div>
     </form>
 
@@ -85,11 +102,31 @@
 </div>
 
 <script>
-    function isNumber()
-    {
-        var number = $("#economical_number").value;
-       console.log(jQuery.type(number));
-    }
+    $("#submit").attr('disabled', 'disabled');
+    $("#economical_number").keyup(function () {
+        //console.log(this.value);
+        console.log((Math.ceil(Math.log10(this.value + 1))-1)+'keyUp');
+        //console.log(jQuery.type(this.value));
+        if(Math.ceil(Math.log10(this.value + 1))-1 < 8){
+            $("#submit").attr('disabled', 'disabled');
+            $("#alert").show();
+        }else{
+            $("#submit").removeAttr('disabled');
+            $("#alert").hide();
+        }
+    })
+    $("#economical_number").focus(function () {
+        //console.log(this.value);
+        console.log((Math.ceil(Math.log10(this.value + 1))-1)+'focus');
+        if(Math.ceil(Math.log10(this.value + 1))-1 < 8){
+            $("#submit").attr('disabled', 'disabled');
+            $("#alert").show();
+        }else{
+            $("#submit").removeAttr('disabled');
+            $("#alert").hide();
+
+        }
+    })
 
 
 </script>

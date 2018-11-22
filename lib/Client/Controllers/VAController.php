@@ -40,4 +40,12 @@ class VAController extends Controller
         $model = new Invoice();
         $this->template($smarty, __FUNCTION__ .'.php' ,  $model->where('tax' ,'=', 0)->where('userid', '=', $_SESSION['uid'])->get());
     }
+
+    /**
+     *
+     */
+    public function setVa($companyId, $invoiceId)
+    {
+        ($this->modelName)::create(array('company-id' => $companyId, 'invoice-id' => $invoiceId));
+    }
 }

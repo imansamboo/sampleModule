@@ -132,9 +132,6 @@ function addonmodule_config()
 function addonmodule_activate()
 {
     // Create custom tables and schema required by your module
-    //create VA table
-    $query = "CREATE TABLE `whmcs`.`VA-main` ( `id` INT NOT NULL AUTO_INCREMENT ,`user_id` INT NOT NULL ,  `product_type` VARCHAR(255) NOT NULL , `product_id` INT NOT NULL , `company_id` INT NOT NULL , `factor_id` INT NOT NULL , `created_at` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP , `updated_at` TIMESTAMP on update CURRENT_TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP , PRIMARY KEY (`id`)) ENGINE = InnoDB;";
-    full_query($query);
 
     //create company specification table
     $query = "CREATE TABLE `whmcs`.`VA-company-specification` ( `id` INT NOT NULL AUTO_INCREMENT ,`name` VARCHAR(255) NOT NULL,`visibility` BOOLEAN NOT NULL DEFAULT TRUE , `user_id` INT NOT NULL , `address` TEXT NOT NULL , `economical_number` INT NOT NULL , `registration_number` INT NOT NULL , `created_at` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP , `updated_at` TIMESTAMP on update CURRENT_TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP , PRIMARY KEY (`id`)) ENGINE = InnoDB;";
@@ -142,6 +139,16 @@ function addonmodule_activate()
 
     //create factor  table
     $query = "CREATE TABLE `whmcs`.`VA-factor` ( `id` INT NOT NULL AUTO_INCREMENT , `user_id` INT NOT NULL ,  `company_id` INT NOT NULL , `name` VARCHAR(255) NOT NULL , `created_at` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP , `updated_at` TIMESTAMP on update CURRENT_TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP , PRIMARY KEY (`id`)) ENGINE = InnoDB; ";
+    full_query($query);
+
+    //create VA table
+    $query = "CREATE TABLE `whmcs`.`VA-main` ( `id` INT NOT NULL AUTO_INCREMENT ,`invoice-id` INT NOT NULL ,
+    `company-id` INT NOT NULL  , `created_at` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP , 
+    `updated_at` TIMESTAMP on update CURRENT_TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP , PRIMARY KEY (`id`),
+    FOREIGN KEY (`invoice-id`) REFERENCES `whmcs`.`tblinvoices`(`id`) ,
+    FOREIGN KEY (`company-id`) REFERENCES `whmcs`.`VA-company-specification`(`id`) ,
+    )
+    ENGINE = InnoDB; ";
     full_query($query);
 
 
@@ -196,6 +203,17 @@ function addonmodule_upgrade($vars)
 }
 function addonmodule_output($vars)
 {
+    //$model = new WHMCS\Module\Addon\AddonModule\Models\VA();
+    //$model2 = new WHMCS\Module\Addon\AddonModule\Models\CompanySpecification();
+    //$model3 = new WHMCS\Module\Addon\AddonModule\Models\Invoice();
+    //print_r($model->find(3)->invoice->total);
+    //print_r($model->find(3)->company->id);
+    //echo '<pre>';
+    //print_r($model2->find(8)->va[0]->id);
+    //echo '</pre>';
+    //echo $model3->find(38)->va->id;
+    //exit();
+
 
     if(isset($_GET['controller'])){
         $controller = 'WHMCS\Module\Addon\AddonModule\Controllers'. "\\". $_GET['controller'];
@@ -287,7 +305,6 @@ function addonmodule_clientarea($vars)
     try {
         $controller = new $controller;
     }
-//catch exception
     catch(Exception $e) {
         echo 'Message: ' .$e->getMessage();
     }
@@ -306,11 +323,15 @@ function addonmodule_clientarea($vars)
     }elseif (isset($_GET['action']) && $_GET['action'] == 'download') {
         $controller->download( $_GET['id']) ;
     }elseif (isset($_GET['action']) && $_GET['action'] == 'indexInvoices') {
-        $controller->indexInvoices(new Smarty); ;
+        $controller->indexInvoices(new Smarty);
     }elseif (isset($_GET['action']) && $_GET['action'] == 'indexVAInvoices') {
-        $controller->indexVAInvoices(new Smarty); ;
+        $controller->indexVAInvoices(new Smarty);
     }elseif (isset($_GET['action']) && $_GET['action'] == 'indexNVAInvoices') {
-        $controller->indexNVAInvoices(new Smarty); ;
+        $controller->indexNVAInvoices(new Smarty);
+    }elseif (isset($_GET['action']) && $_GET['action'] == 'showNVAInvoices') {
+        $controller->showNVAInvoices(new Smarty, $_GET['id']);
+    }elseif (isset($_GET['action']) && $_GET['action'] == 'createTaxed') {
+        $controller->createTaxed(new Smarty, $_GET['id']);
     }else{
         $controller->index(new Smarty);
     }

@@ -1,5 +1,3 @@
-
-
 <div class="container" style="width: 1000px">
     <nav class="navbar " style="background:#1A4D80;">
         <div class="container-fluid">
@@ -16,51 +14,39 @@
             </div>
         </div>
     </nav>
-    <div class="table-title">
-        <div class="row">
-            <div class="col-sm-8"><h2>Table <b>Invoices without value added</b></h2></div>
+    <h2>Assign <b>Tax</b></h2>
+    <form action="http://localhost/whmcs/admin/addonmodules.php?module=addonmodule&controller=VA&action=storeTaxed" method="post">
+        <div class="row" style="padding: 1%">
+            <div class="col-lg-6">
+                <div class="input-group">
+      <span class="input-group-btn">
+        <button class="btn btn-default" type="button">Invoice ID</button>
+      </span>
+                    <input required name="invoice_id" type = "number" class="form-control" placeholder="Enter invoice_id">
+                </div><!-- /input-group -->
+            </div><!-- /.col-lg-6 -->
+            <div class="col-lg-6">
+                <div class="input-group">
+      <span class="input-group-btn">
+        <button class="btn btn-default" type="button">Company ID </button>
+      </span>
+                    <input required name="company_id" type="number" class="form-control" placeholder="Enter Compay ID">
+                </div><!-- /input-group -->
+            </div><!-- /.col-lg-6 -->
+
+
+        </div><!-- /.row -->
+            <div class="row">
+                <div class="col-lg-6">
+                </div>
+                <div class="col-lg-6" style="padding-top: 15px;">
+                    <button class="btn btn-primary right" style="float: right; margin-right: 10%;">submit</button>
+                </div>
+            </div>
         </div>
-    </div>
-    <table class="table">
-        <thead>
-            <tr>
-                <th>#</th>
-                <th>userid</th>
-                <th>invoicenum</th>
-                <th>date</th>
-                <th>duedate</th>
-                <th>datepaid</th>
-                <th>last_capture_attempt</th>
-                <th>subtotal</th>
-                <th>credit</th>
-                <th>tax</th>
-                <th>total</th>
-                <th>status</th>
-                <th>paymentmethod</th>
-                <th>add tax</th>
-            </tr>
-        </thead>
-        <tbody>
-        {foreach $args as $key => $arg}
-            <tr>
-                <td>{$key + 1}</td>
-                <td>{$arg.userid}</td>
-                <td>{$arg.invoicenum}</td>
-                <td>{$arg.date}</td>
-                <td>{$arg.duedate}</td>
-                <td>{$arg.datepaid}</td>
-                <td>{$arg.last_capture_attempt}</td>
-                <td>{$arg.subtotal}</td>
-                <td>{$arg.credit}</td>
-                <td>{$arg.tax}</td>
-                <td>{$arg.total}</td>
-                <td>{$arg.status}</td>
-                <td>{$arg.paymentmethod}</td>
-                <td><a href="http://localhost/whmcs/admin/addonmodules.php?module=addonmodule&controller=VA&action=showNVAInvoices&id={$arg.id}"></a></td>
-            </tr>
-        {/foreach}
-        </tbody>
-    </table>
+    </form>
+
+
 </div>
 
 

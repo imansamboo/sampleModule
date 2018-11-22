@@ -32,4 +32,12 @@ class CompanySpecification extends Model
      */
     protected $fillable = ['user_id', 'address', 'economical_number', 'registration_number', 'visibility', 'name'];
 
+    /**
+     * @return mixed
+     */
+    public function va()
+    {
+        return $this->hasMany(VA::class, 'company-id', 'id');
+    }
+
 }

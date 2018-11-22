@@ -31,5 +31,21 @@ class VA extends Model
      *
      * @var array
      */
-    protected $fillable = ['user_id','product_type', 'product_id', 'company_id', 'factor_id'];
+    protected $fillable = ['invoice-id', 'company-id'];
+
+    /**
+     * @return mixed
+     */
+    public function invoice()
+    {
+        return $this->belongsTo(Invoice::class,'id', 'invoice-id');
+    }
+
+    /**
+     * @return mixed
+     */
+    public function company()
+    {
+        return $this->belongsTo(CompanySpecification::class, 'company-id', 'id');
+    }
 }
