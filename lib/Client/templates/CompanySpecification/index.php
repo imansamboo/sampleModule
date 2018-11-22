@@ -401,7 +401,6 @@
                 <ul class="nav navbar-nav">
                     <li  class="active"><a style="color: white; font-weight: bold" href="http://localhost/whmcs/index.php?m=addonmodule&controller=VAFactor">Invoices File</a></li>
                     <li  class=""><a style="color: white; font-weight: bold" href="http://localhost/whmcs/index.php?m=addonmodule&controller=CompanySpecification">Company Specification</a></li>
-                    <li ><a style="color: white; font-weight: bold" href="http://localhost/whmcs/index.php?m=addonmodule&controller=VA">Value Added</a></li>
                     <li ><a style="color: white; font-weight: bold" href="http://localhost/whmcs/index.php?m=addonmodule&controller=VA&action=indexInvoices">Invoices</a></li>
                     <li ><a style="color: white; font-weight: bold" href="http://localhost/whmcs/index.php?m=addonmodule&controller=VA&action=indexVAInvoices">Value Added Invoices</a></li>
                     <li ><a style="color: white; font-weight: bold" href="http://localhost/whmcs/index.php?m=addonmodule&controller=VA&action=indexNVAInvoices">NON-Value Added Invoices</a></li>

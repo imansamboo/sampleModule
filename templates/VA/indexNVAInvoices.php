@@ -9,9 +9,7 @@
                 <ul class="nav navbar-nav">
                     <li  class="active"><a style="color: white; font-weight: bold" href="http://localhost/whmcs/admin/addonmodules.php?module=addonmodule&controller=VAFactor">Invoices File</a></li>
                     <li  class=""><a style="color: white; font-weight: bold" href="http://localhost/whmcs/admin/addonmodules.php?module=addonmodule&controller=CompanySpecification">Company Specification</a></li>
-                    <li ><a style="color: white; font-weight: bold" href="http://localhost/whmcs/admin/addonmodules.php?module=addonmodule&controller=VA">Value Added</a></li>
                     <li ><a style="color: white; font-weight: bold" href="http://localhost/whmcs/admin/addonmodules.php?module=addonmodule&controller=VA&action=indexInvoices">Invoices</a></li>
-                    <li ><a style="color: white; font-weight: bold" href="http://localhost/whmcs/admin/addonmodules.php?module=addonmodule&controller=VA&action=indexVAInvoices">Value Added Invoices</a></li>
                     <li ><a style="color: white; font-weight: bold" href="http://localhost/whmcs/admin/addonmodules.php?module=addonmodule&controller=VA&action=indexNVAInvoices">NON-Value Added Invoices</a></li>                </ul>
             </div>
         </div>
@@ -52,7 +50,7 @@
                 <td>{$arg.tax}</td>
                 <td>{$arg.total}</td>
                 <td>{$arg.status}</td>
-                <td><a href="http://localhost/whmcs/admin/addonmodules.php?module=addonmodule&controller=VA&action=showNVAInvoices&id={$arg.id}">add tax</a></td>
+                <td><a href="http://localhost/whmcs/admin/addonmodules.php?module=addonmodule&controller=VA&action=showNVAInvoices&id={$arg.id}"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></a></td>
             </tr>
         {/foreach}
         </tbody>

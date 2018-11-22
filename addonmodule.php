@@ -323,12 +323,6 @@ function addonmodule_clientarea($vars)
         $controller->indexVAInvoices(new Smarty);
     }elseif (isset($_GET['action']) && $_GET['action'] == 'indexNVAInvoices') {
         $controller->indexNVAInvoices(new Smarty);
-    }elseif (isset($_GET['action']) && $_GET['action'] == 'showNVAInvoices') {
-        $controller->showNVAInvoices(new Smarty, $_GET['id']);
-    }elseif (isset($_GET['action']) && $_GET['action'] == 'createTaxed') {
-        $controller->createTaxed(new Smarty, $_GET['id']);
-    }elseif (isset($_GET['action']) && $_GET['action'] == 'storeTaxed') {
-        $controller->storeTaxed(new Smarty, $_POST[''], $_POST['']);
     }else{
         $controller->index(new Smarty);
     }

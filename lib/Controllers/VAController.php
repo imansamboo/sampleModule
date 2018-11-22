@@ -9,6 +9,7 @@
 namespace WHMCS\Module\Addon\AddonModule\Controllers;
 use WHMCS\Module\Addon\AddonModule\Models\Invoice;
 use WHMCS\Module\Addon\AddonModule\Models\CompanySpecification;
+use WHMCS\Database\Capsule as Capsule;
 
 
 class VAController extends Controller
@@ -71,16 +72,17 @@ class VAController extends Controller
     {
         $invoice = Invoice::findOrFail($invoiceId);
         $oldTotal = $invoice->total;
-        if($invoice->tax == 0) {
+        if($invoice->tax != 0) {
             return $this->indexInvoices($smarty);
         }
-        $invoice->update(
-            array(
-                'tax' => 0.09*$oldTotal,
-                'subtotal' => $oldTotal,
-                'total' => 1.09*$oldTotal,
-            )
-        );
+        Capsule::table('tblinvoices')
+            ->where('id', $invoiceId)
+            ->update(
+                [
+                    'tax' => 0.09*$oldTotal,
+                    'total' => 1.09*$oldTotal,
+                ]
+            );
         Capsule::table('tblinvoiceitems')
             ->where('invoiceid', $invoiceId)
             ->update(
@@ -88,6 +90,7 @@ class VAController extends Controller
                     'taxed' => 1,
                 ]
             );
+
         $InvoiceItems = Capsule::table('tblinvoiceitems')
             ->where('invoiceid', '=',$invoiceId)
             ->get();
@@ -109,6 +112,6 @@ class VAController extends Controller
         );
 
 
-        return $this->indexInvoices();
+        return $this->indexNVAInvoices($smarty);
     }
 }

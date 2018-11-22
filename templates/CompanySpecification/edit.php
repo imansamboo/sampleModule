@@ -9,7 +9,6 @@
                         <ul class="nav navbar-nav">
                             <li  class="active"><a style="color: white; font-weight: bold" href="http://localhost/whmcs/admin/addonmodules.php?module=addonmodule&controller=VAFactor">Invoices File</a></li>
                             <li  class=""><a style="color: white; font-weight: bold" href="http://localhost/whmcs/admin/addonmodules.php?module=addonmodule&controller=CompanySpecification">Company Specification</a></li>
-                            <li ><a style="color: white; font-weight: bold" href="http://localhost/whmcs/admin/addonmodules.php?module=addonmodule&controller=VA">Value Added</a></li>
                             <li ><a style="color: white; font-weight: bold" href="http://localhost/whmcs/admin/addonmodules.php?module=addonmodule&controller=VA&action=indexInvoices">Invoices</a></li>
                             <li ><a style="color: white; font-weight: bold" href="http://localhost/whmcs/admin/addonmodules.php?module=addonmodule&controller=VA&action=indexVAInvoices">Value Added Invoices</a></li>
                             <li ><a style="color: white; font-weight: bold" href="http://localhost/whmcs/admin/addonmodules.php?module=addonmodule&controller=VA&action=indexNVAInvoices">NON-Value Added Invoices</a></li>
@@ -34,7 +33,7 @@
               <span class="input-group-btn">
                 <button class="btn btn-default" type="button">Registration Number</button>
               </span>
-                            <input value="{$args.registration_number}" required name="registration_number" type="text" class="form-control" placeholder="Enter Registration Number">
+                            <input value="{$args.registration_number}" required name="registration_number" type="number" class="form-control" placeholder="Enter Registration Number">
                         </div><!-- /input-group -->
                     </div><!-- /.col-lg-6 -->
 
@@ -60,7 +59,7 @@
               <span class="input-group-btn">
                 <button class="btn btn-default" type="button">Economical Number</button>
               </span>
-                            <input value="{$args.economical_number}" required name="economical_number" type="text" class="form-control" placeholder="Enter Economical Number">
+                            <input value="{$args.economical_number}" required name="economical_number" type="number" class="form-control" placeholder="Enter Economical Number">
                         </div><!-- /input-group -->
                     </div><!-- /.col-lg-6 -->
                     <div class="col-lg-6">
